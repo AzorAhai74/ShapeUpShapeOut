@@ -1,6 +1,3 @@
-.divTemplate {
-    height: 600px;
-    width: 600px;
-    
-};
-
+.col1 {
+    border-width: 2px;
+}
