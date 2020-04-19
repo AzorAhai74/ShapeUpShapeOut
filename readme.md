@@ -1,4 +1,4 @@
-Shape Up Or Shape Out:
+Shape Up Or Shape Out
 
 
 The purpose of this lab is to help solidify the OOP Class inheritance concepts you've learned from the lectures.
