@@ -11,14 +11,38 @@
     crossorigin="anonymous">
     <script src='script.js'></script>
 </head>
-<body>
-    <div class='container-fluid'>
-        <div></div>
+<body class='bodyStyle'>
+    <div class='container'>
     </div>
-    <div class='col1'><button class='btn btn-primary' type='button'></button><input type='text'>
-        <button class='btn btn-primary' type='button'></button><input type='text><button class='btn btn-primary'
-            type='button'></button><input type='text'><button class='btn btn-primary' type='button'></button><input type='text'>
-                <button class='btn btn-primary' type='button'></button><input type='text'><button class='btn btn-primary'></button><input type='text'>
-                <button class='btn btn-primary' type='button'></button><input type='text'><button class='btn btn-primary'></button><input type='text'>
+    <div class='colOne'>
+        <button class='btn-primary' type='button'>Add Rectangle</button>
+            <input type='text' placeholder='Enter Height: Px'/><input type='text' placeholder='Enter Width: Px'/>
+        <button class='btn-primary' type='button'>Add Square</button>
+            <input type='text' placeholder='Enter Side Length'/>
+        <button class='btn-primary' type='button'>Add Circle</button>
+            <input type='text' placeholder='Enter Radius'/>
+        <button class='btn-primary' type='button'>Add Triangle</button>
+            <input type='text' placeholder='Enter Height: Px'/>
+    </div>
+    <div class='colTwo'>
+        <div class='shape'>
+            <input type='text' placeholder='shape'/>
+        </div>
+        <div class='height'>
+            <input type='text' placeholder='height'/>
+        </div>
+        <div class='width'>
+            <input type='text' placeholder='width'/>
+        </div>
+        <div class='area'>
+            <input type='text' placeholder='area'/>
+        </div>
+        <div class='perimeter'>
+            <input type='text' placeholder='perimeter'/>
+        </div>
+        <div class='radius'>
+            <input type='text' placeholder='radius'/>
+        </div>  
+    </div>
 </body>
 </html>
