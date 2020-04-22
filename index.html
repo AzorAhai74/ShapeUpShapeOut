@@ -11,38 +11,27 @@
     crossorigin="anonymous">
     <script src='script.js'></script>
 </head>
-<body class='bodyStyle'>
-    <div class='container'>
+<body>
+    <div class="container" style="width: 698px;height: 80px;margin-top: 0px;margin-bottom: 35px;border-style: solid;border-color: black;background-color: aquamarine;">
     </div>
-    <div class='colOne'>
-        <button class='btn-primary' type='button'>Add Rectangle</button>
-            <input type='text' placeholder='Enter Height: Px'/><input type='text' placeholder='Enter Width: Px'/>
-        <button class='btn-primary' type='button'>Add Square</button>
-            <input type='text' placeholder='Enter Side Length'/>
-        <button class='btn-primary' type='button'>Add Circle</button>
-            <input type='text' placeholder='Enter Radius'/>
-        <button class='btn-primary' type='button'>Add Triangle</button>
-            <input type='text' placeholder='Enter Height: Px'/>
-    </div>
-    <div class='colTwo'>
-        <div class='shape'>
-            <input type='text' placeholder='shape'/>
+    <div class="d-flex justify-content-center">
+        <div class="col1 shadow-lg p-4 mb-4 bg-light;background-color" style="width: 209px;margin: 5px;height: 366px;margin-top: 0px;padding: 15px; background-color: aquamarine;border-color: black;border-style: solid;">
+            <button class="btn btn-primary" type="button" style="width: 150px;padding: 0px;height: 30px;background-color:lightcoral;">Add Rectangle</button><input 
+            type="text" style="padding: 1px;width: 175px;border-color: blue;" placeholder='Enter Height Px' /><input type="text" style='padding:1px;width: 175px;border-color: blue' placeholder='Enter Width Px' />
+            <button class="btn btn-primary" type="button" style="width: 150px;height: 30px;padding: 0px;background-color:lightcoral;">Add Square</button><input
+            type="text" style='padding: 1px;width: 175px;border-color: blue' placeholder='Enter Side Length' />
+            <button class="btn btn-primary" type="button" style="width: 150px;height: 30px;padding: 0px;background-color:lightcoral;">Add Circle</button><input 
+            type="text" style='padding:1px;width:175px;border-color: blue' placeholder='Enter Radius' /><button class="btn btn-primary" type="button" style="width: 150px;height: 30px;padding: 0px;background-color:lightcoral;">Add Triangle</button><input
+            type="text" style='padding: 1px;width:175px;border-color: blue' placeholder='Enter Height'/>
         </div>
-        <div class='height'>
-            <input type='text' placeholder='height'/>
-        </div>
-        <div class='width'>
-            <input type='text' placeholder='width'/>
-        </div>
-        <div class='area'>
-            <input type='text' placeholder='area'/>
-        </div>
-        <div class='perimeter'>
-            <input type='text' placeholder='perimeter'/>
-        </div>
-        <div class='radius'>
-            <input type='text' placeholder='radius'/>
-        </div>  
+    <div class='template' style='height: 600px;width: 600px;border-style: solid;border-color: black;background-color: lightskyblue;'></div>
+        <div class="col2 shadow-lg p-4 mb-4 bg-light;background-color" style="height: 366px;width: 209px;margin: 5px;margin-top: 0px;padding: 15px;background-color: aquamarine;border-style:solid;border-color:black;">
+        <input type='text' placeholder='Shape' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
+        <input type='text' placeholder='Height' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
+        <input type='text' placeholder='Width' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
+        <input type='text' placeholder='Area' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
+        <input type='text' placeholder='Perimeter' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
+        <input type='text' placeholder='Radius' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
     </div>
 </body>
 </html>
