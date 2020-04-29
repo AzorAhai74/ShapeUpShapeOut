@@ -7,16 +7,33 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Shrikhand&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class='template' style='height: 600px;width: 600px;border-style: solid;border-color: black;background-color: lightskyblue;'></div>
-        <div class="col2 shadow-lg p-4 mb-4 bg-light;background-color" style="height: 366px;width: 209px;margin: 5px;margin-top: 0px;padding: 15px;background-color: aquamarine;border-style:solid;border-color:black;">
-        <input type='text' placeholder='Shape' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
-        <input type='text' placeholder='Height' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
-        <input type='text' placeholder='Width' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
-        <input type='text' placeholder='Area' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
-        <input type='text' placeholder='Perimeter' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
-        <input type='text' placeholder='Radius' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
+    <div class='container shadow-lg border border-info'></div>
+    <div class='containerCol-fluid'>
+        <div class='row'>
+            <div class='col-md-2 shadow-lg border border-info p-4 ml-4 mb-5 mt-2'>
+                <button class="btn btn-primary" id='rectBtn' type="button">Add Rectangle</button>
+                    <input id='rectHinput' type="text" placeholder='Enter Height px'/>
+                    <input id='rectWinput' type="text" placeholder='Enter Width px'/>
+                <button class="btn btn-primary" id='squareBtn' type="button">Add Square</button>
+                    <input id='squareInput' type="text" placeholder='Enter Side-Length'/>
+                <button class="btn btn-primary" id='circleBtn' type="button">Add Circle</button>
+                    <input id='circleInput' type="text" placeholder='Enter Radius'/>
+                <button class="btn btn-primary" id='triangleBtn' type="button">Add Triangle</button>
+                    <input id='triangleInput' type="text" placeholder='Enter Height px'/>
+            </div>
+            <div class='template'></div>
+            <div class='col-md-2 shadow-lg border border-info p-4 ml-4 mb-5 mt-2'>
+                <input id='shapeInput' type='text' placeholder='Shape'/>
+                <input id='heightInput' type='text' placeholder='Height'/>
+                <input id='widthInput' type='text' placeholder='Width'/>
+                <input id='areaInput' type='text' placeholder='Area'/>
+                <input id='perInput' type='text' placeholder='Perimeter'/>
+                <input id='radiusInput' type='text' placeholder='Radius'/>
+            </div>
+        </div>
     </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
