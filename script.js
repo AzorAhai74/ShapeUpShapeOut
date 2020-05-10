@@ -15,22 +15,58 @@ $(document).ready(function() {
 		'margin': 'auto'
 	});
 
-	let $rectBtn = $('<button></button>');
-	$($rectBtn).addClass('btn btn-primary');
-	$($rectBtn).attr('id', 'rectHinput');
-	$($rectBtn).attr('id', 'rectWinput');
+	
+	let $rectH = $('id', 'rectHinput');
+	let $rectW = $('id', 'rectWinput');
+	$rectBtn.addEventListener('click', addRectangle());
 	
 	let $squareBtn = $('<button></button>');
 	$($squareBtn).addClass('btn btn-primary');
 	$($squareBtn).attr('id', 'squareInput');
+	$squareBtn.addEventListener('click', addSquare());
 	
 	let $circleBtn = $('<button></button>');
 	$($circleBtn).addClass('btn btn-primary');
 	$($circleBtn).attr('id', 'circleInput');
+	$circleBtn.addEventListener('click', addCircle());
 	
 	let $triangleBtn = $('<button></button>');
 	$($triangleBtn).addClass('btn btn-primary');
 	$($triangleBtn).attr('id', 'triangleInput');
+	$triangleBtn.addEventListener('click', addTriangle());
+
+	function addRectangle() {
+		let rectW = document.getElementById("rectWinput").value; 
+		let rectH = document.getElementById("rectHinput").value;
+		let xValue = randomValue(0, 600-rectW);
+		let yValue = randomValue(0, 600-rectH);
+		let newRect = new Rectangle(xValue, yValue, rectW, rectH);
+	};
+
+	function addSquare() {
+		let size = document.getElementById("squareInput").value;
+		let xValue = randomValue(0, 600-size);
+		let yValue = randomValue(0, 600-size);
+		let newSquare = new Square(xValue, yValue, size);
+	};
+
+	function addCircle() {
+		let radius = document.getElementById("circleInput").value;
+		let xValue = randomValue(0, 600-(radius*2));
+		let yValue = randomValue(0, 600-(radius*2));
+		let newCircle = new Circle(xValue, yValue, radius);
+	};
+
+	function addTriangle() {
+		let size = document.getElementById("triagnleInput").value
+		let xValue = randomValue(0, 600-size);
+		let yValue = randomValue(0, 600-size);
+		let newTriangle = new Triangle(xValue, yValue, size);
+	};
+
+	function randomValue(min, max) {
+		return Math.floor(Math.random() * (max-min));
+	};
 
 	let $divTemplate = $('<div></div>');
 	$($divTemplate).addClass('template');
@@ -155,33 +191,101 @@ $(document).ready(function() {
 	
 	
 	class Shape {
-	    constructor() {
-			
+	    constructor(x, y) {
+			this.div = document.createElement('div');
+			this.div.style.left = `${x}px`;
+			this.div.style.top = `${y}px`;
+			shapeName.appendChild(this.div);
 	    }
 	};
 	
 	
-	class Rectangle {
-	    constructor() {
-	        
-	    }
+	class Rectangle extends Shape {
+	    constructor(x, y, rectHinput, rectWinput) {
+			super(x, y);
+			this.div.ClassList.add('rectangle');
+			this.div.style.height = `${rectHinput}px`;
+			this.div.style.width = `${rectWinput}px`;
+
+			this.div.addEventListener('click', () => {
+				shapeInput.value = this.div.classList;
+				heightInput.value = rectHinput;
+				widthInput.value = rectWinput;
+				radiusInput.value = null;
+				areaInput.value = rectHinput*rectWinput;
+				perInput.value = 2*(+rectWinput + +rectHinput);
+			});
+
+			this.div.addEventListener('dblclick', () => {
+				this.div.remove();
+			});
+	    }	
 	
 	}
 	
-	class Square {
-	    constructor() {
+	class Square extends Shape {
+	    constructor(x, y, size) {
+			super(x, y);
+			this.div.ClassList.add('square');
+			this.div.style.height = `${size}px`;
+			this.div.style.width = `${size}px`;
+
+			this.div.addEventListener('click', () => {
+				shapeInput.value = this.div.classList;
+				heightInput.value = size;
+				widthInput.value = size;
+				radiusInput.value = null;
+				areaInput.value = size**2;
+				perInput.Value = 4*size;
+			});
+
+			this.div.addEventListener('dblclick', () => {
+				this.div.remove();
+			});
 	    }
 	}
 	
-	class Circle {
-	    constructor() {
-	
+	class Circle extends Shape {
+	    constructor(x, y, radius) {
+			super(x, y);
+			this.div.ClassList.add('circle');
+			this.div.style.height = `${radius*2}px`;
+			this.div.style.width = `${radius*2}px`;
+
+			this.div.addEventListener('click', () => {
+				shapeInput.value = this.div.classList;
+				heightInput.value = radius*2;
+				widthInput.value = radius*2;
+				radiusInput.value = radius;
+				areaInput.value = (Math.PI)*((radius) **2);
+				perInput.value = (2) * (radius) * (Math.PI);
+			});
+
+			this.div.addEventListener('dblclick', () => {
+				this.div.remove();
+			});
 	    }
 	}
 	
-	class Triangle {
-	    constructor() {
-	
+	class Triangle extends Shape {
+	    constructor(x, y, size) {
+			super(x, y);
+			this.div.ClassList.add('triangle');
+			this.div.style.borderBottom = `${size}px solid rgb(253, 237, 91)`;
+			this.div.style.borderRight = `${size}px solid transparent`;
+
+			this.div.addEventListener('click', () => {
+				shapeInput.value = this.div.classList;
+				heightInput.value = size;
+				widthInput.value = size;
+				radiusInput.value = null;
+				areaInput.value = (size*size)/2;
+				perInput.value = +size + +size + Math. sqrt(size**2 + size**2);
+			});
+
+			this.div.addEventListener('dblclick', () => {
+				this.div.remove();
+			});
 	    }
 	}
 
