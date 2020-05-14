@@ -10,15 +10,34 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Shrikhand&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button class='btn btn-primary' type='button'>Add Rectangle</button>
-        <input type='text' placeholder='Enter Height: Px'/>
-        <input type='text' placeholder='Enter Width: Px'/>
-    <button class='btn-primary' type='button'>Add Square</button>
-        <input type='text' placeholder='Enter Side Length'/>
-    <button class='btn-primary' type='button'>Add Circle</button>
-        <input type='text' placeholder='Enter Radius'/>
-    <button class='btn-primary' type='button'>Add Triangle</button>
-        <input type='text' placeholder='Enter Height: Px'/>
+    <div class="container" id='containerTop' style="width: 698px;height: 80px;margin-top: 0px;margin-bottom: 35px;border-style: solid;border-color: black;background-color: aquamarine;">Shape Generator</div>
+    <div class="d-flex justify-content-center">
+        <div class="col1 shadow-lg p-4 bg-light;background-color" style="width: 209px;margin: 150px;height: 366px;padding: 15px; background-color: aquamarine;border-color: black;border-style: solid;">
+            <button class="btn btn-primary" id='rectBtn' type="submit" style="width: 150px;padding: 0px;height: 30px;background-color:lightcoral;">Add Rectangle</button>
+                <input type="text" id='rectH' style="padding: 1px;width: 175px;border-color: blue;" placeholder='Enter Height Px' />
+                <input type="text" id='rectW' style='padding:1px;width: 175px;border-color: blue' placeholder='Enter Width Px' />
+            <button class="btn btn-primary" id='squareBtn' type="submit" style="width: 150px;height: 30px;padding: 0px;background-color:lightcoral;">Add Square</button>
+                <input type="text" id='squareLength' style='padding: 1px;width: 175px;border-color: blue' placeholder='Enter Side Length' />
+            <button class="btn btn-primary" id='circleBtn' type="submit" style="width: 150px;height: 30px;padding: 0px;background-color:lightcoral;">Add Circle</button>
+                <input type="text" id='circleRadius' style='padding:1px;width:175px;border-color: blue' placeholder='Enter Radius' />
+            <button class="btn btn-primary" id='triangleBtn' type="submit" style="width: 150px;height: 30px;padding: 0px;background-color:lightcoral;">Add Triangle</button>
+                <input type="text" id='triangleH' style='padding: 1px;width:175px;border-color: blue' placeholder='Enter Height'/>
+        </div>
+    <div class='container-fluid' id='shape' style='height: 600px;width: 600px;border-style: solid;border-color: black;background-color: lightskyblue;'>
+        <div class='row'>
+            <div class='col'>
+                <div id='shapeArea'></div>
+            </div>
+        </div>
+    </div>
+        <div class="col2 shadow-lg p-4 bg-light;background-color" style="height: 366px;width: 209px;margin: 150px;padding: 15px;background-color: aquamarine;border-style:solid;border-color:black;">
+        <input type='text' id='shapeName' placeholder='Shape' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
+        <input type='text' id='height' placeholder='Height' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
+        <input type='text' id='width' placeholder='Width' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
+        <input type='text' id='area' placeholder='Area' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
+        <input type='text' id='perimeter' placeholder='Perimeter' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
+        <input type='text' id='radius' placeholder='Radius' style='width: 150px;margin: 10px;border-style:solid;border-color:blue'/>
+    </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
