@@ -1,7 +1,8 @@
 $(document).ready(function() {
-		
+	//clears input values upon page reload//	
 	$('input[type!="button"][type!="submit"], select, textarea').val('').blur();
 
+	//function to add location of rectangle and input values of rectangle dimensions//
 	function addRectangle() {
 		let rectH = document.getElementById('rectH').value;
 		let rectW = document.getElementById('rectW').value;
@@ -9,34 +10,35 @@ $(document).ready(function() {
 		let yValue = randomValue(0, 600-rectH);
 		let newRect = new Rectangle(xValue, yValue, rectW, rectH);
 	};
-
+	//function to add location of square and input values of square dimensions//
 	function addSquare() {
 		let size = document.getElementById('squareLength').value;
 		let xValue = randomValue(0, 600-size);
 		let yValue = randomValue(0, 600-size);
 		let newSquare = new Square(xValue, yValue, size);
 	};
-
+	
+	//function to add location of circle and input values of circle dimensions//
 	function addCircle() {
 		let radius = document.getElementById('circleRadius').value;
 		let xValue = randomValue(0, 600-(radius*2));
 		let yValue = randomValue(0, 600-(radius*2));
 		let newCircle = new Circle(xValue, yValue, radius);
 	};
-
+	//function to add location of triangle and input values of triangle dimensions//
 	function addTriangle() {
 		let size = document.getElementById('triangleH').value;
 		let xValue = randomValue(0, 600-size);
 		let yValue = randomValue(0, 600-size);
 		let newTriangle = new Triangle(xValue, yValue, size);
 	};
-
+	//function to place shapes in random locaiton of shape area//
 	function randomValue(min, max) {
 		return Math.floor(Math.random() * (max-min));
 	};
 
 
-		
+	//button submit listeners that places shapes on shape area//
 	let $rectBtn = document.getElementById('rectBtn');
 	$rectBtn.addEventListener('click', addRectangle);
 
@@ -64,6 +66,7 @@ $(document).ready(function() {
 
 	let perInput = document.getElementById('perimeter');
 		
+	//class for shape constructor//
 	class Shape {
 		constructor(x, y) {
 			this.div = document.createElement('div');
@@ -73,7 +76,7 @@ $(document).ready(function() {
 		}
 	};
 	
-	
+	//class for rectangle constructor//
 	class Rectangle extends Shape {
 		constructor(x, y, rectH, rectW) {
 			super(x, y);
@@ -99,6 +102,7 @@ $(document).ready(function() {
 	
 	}
 	
+	//class for square constructor//
 	class Square extends Shape {
 		constructor(x, y, size) {
 			super(x, y);
@@ -122,7 +126,7 @@ $(document).ready(function() {
 			});
 		}
 	}
-	
+	//class for circle constructor//
 	class Circle extends Shape {
 		constructor(x, y, radius) {
 			super(x, y);
@@ -147,7 +151,7 @@ $(document).ready(function() {
 			});
 		}
 	}
-	
+	//class for triangle constructor//
 	class Triangle extends Shape {
 		constructor(x, y, size) {
 			super(x, y);
